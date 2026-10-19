@@ -1,104 +1,154 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>La Détente Haute Gamme</title>
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>La Détente · Restaurant • Bar · Kalemie</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F9F7F0;--cd:#fff;--tx:#0A0A0A;--g:#D4AF37;--ok:#1B8C4A;--bd:#E8E0C8;--bad:#c0392b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0A0A0A;--cd:#141414;--tx:#F9F7F0;--bd:#2c2c2c}}
-:root[data-theme=dark]{--bg:#0A0A0A;--cd:#141414;--tx:#F9F7F0;--bd:#2c2c2c}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px Poppins,system-ui,sans-serif}
 h1,h2,h3{font-family:'Playfair Display',serif;margin:0 0 8px}h3{font-size:16px}
-header{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#0A0A0A;color:var(--g);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
-header b{font:600 18px 'Playfair Display',serif}main{padding:12px;max-width:760px;margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 14px;background:#0A0A0A;color:var(--g);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header b{font:600 17px 'Playfair Display',serif}main{padding:12px;max-width:820px;margin:auto}
 .c{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:12px;margin-bottom:12px;overflow-x:auto}
-button,select,input{font:inherit;border-radius:8px;border:1px solid var(--bd);padding:8px 10px;background:var(--cd);color:var(--tx);max-width:100%}
-button{cursor:pointer}.p{background:var(--g);color:#0A0A0A;border:0;font-weight:600}.ok{background:var(--ok);color:#fff;border:0}.w{background:#25D366;color:#fff;border:0}
+button,select,input,textarea{font:inherit;border-radius:8px;border:1px solid var(--bd);padding:8px 10px;background:var(--cd);color:var(--tx);max-width:100%}
+input,textarea{width:100%;margin:4px 0}button{cursor:pointer}.p{background:var(--g);color:#0A0A0A;border:0;font-weight:600}.ok{background:var(--ok);color:#fff;border:0}.w{background:#25D366;color:#fff;border:0}.dg{background:var(--bad);color:#fff;border:0}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:6px 0}
 .tk{background:#0A0A0A;color:var(--g);overflow:hidden;white-space:nowrap;border-radius:10px;padding:10px 0;margin-bottom:12px}
-.tk div{display:inline-block;padding-left:100%;animation:m 28s linear infinite}@keyframes m{to{transform:translateX(-100%)}}
-.vd{display:grid;grid-template-columns:1fr 1fr;gap:8px}.vd div{aspect-ratio:16/10;border-radius:10px;background:linear-gradient(135deg,#0A0A0A,#3a3012);color:var(--g);display:flex;align-items:flex-end;padding:8px;font-size:12px}
+.tk div{display:inline-block;padding-left:100%;animation:m 30s linear infinite}@keyframes m{to{transform:translateX(-100%)}}
+.vd{display:grid;grid-template-columns:1fr 1fr;gap:8px}.vd div{aspect-ratio:16/10;border-radius:10px;background:linear-gradient(135deg,#0A0A0A,#3a3012);color:var(--g);display:flex;align-items:flex-end;padding:8px;font-size:12px;overflow:hidden}.vd iframe{width:100%;height:100%;border:0;margin:-8px}
 .bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--g)}
 .tag{font-size:11px;padding:2px 8px;border-radius:10px;background:var(--bd)}.bad{color:var(--bad)}.g{color:var(--ok)}
-.md{position:fixed;inset:0;background:#000a;z-index:9;display:flex;align-items:flex-end;justify-content:center}.md>div{background:var(--bg);width:100%;max-width:760px;max-height:88%;overflow:auto;padding:14px;border-radius:16px 16px 0 0}
-.dr{position:fixed;top:0;right:0;bottom:0;width:78%;max-width:300px;background:var(--bg);z-index:8;padding:16px;box-shadow:-4px 0 20px #0006;overflow:auto}
-.dr button{display:block;width:100%;text-align:left;margin-bottom:8px}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:5px;border-bottom:1px solid var(--bd);text-align:left}
-.hero{background:radial-gradient(circle at 70% 20%,#3a3012,#0A0A0A 70%);color:#F9F7F0;padding:60px 18px;text-align:center}.hero h1{font:600 32px 'Playfair Display',serif;color:var(--g);margin:10px 0}.hero small{letter-spacing:.2em;color:var(--g)}.gr{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.ft{background:#0A0A0A;color:#F9F7F0;text-align:center;padding:24px 14px;font-size:12px}.av{width:72px;height:72px;border-radius:50%;background:var(--g);object-fit:cover;display:block}
-</style></head><body><div id="app"></div>
-<script>
-const WA='243970000000',WAG='https://chat.whatsapp.com/LIEN_GROUPE',WAS='https://chat.whatsapp.com/LIEN_STAFF';
-const K='ldhg1';const FX=()=>({u:{n:'',pw:'',ph:'',pts:0},
-menu:[{id:1,n:'Moambe Royale',t:'f',p:28000,s:20,d:1,x:0},{id:2,n:'Tanganyika Catch (pêche du jour)',t:'f',p:32000,s:12,d:1,x:0},{id:3,n:'Poulet Moambe',t:'f',p:18000,s:25,d:0,x:0},{id:4,n:'Brochettes Mix',t:'f',p:22000,s:20,d:0,x:0},{id:5,n:'Poisson Salé',t:'f',p:25000,s:10,d:0,x:0},{id:6,n:'Fufu',t:'f',p:3000,s:40,d:0,x:0},{id:7,n:'Cocktail Détente',t:'d',p:12000,s:30,d:1,x:0},{id:8,n:'Primus 72cl',t:'d',p:5000,s:80,d:0,x:0}],
-pl:{Terrasse:{max:20,occ:6},Bar:{max:12,occ:5},VIP:{max:8,occ:2}},o:[],rs:[],nd:[],rp:[],
-st:[{n:'Marie',r:'Serveur',tb:'T1, T2, T3'},{n:'Jean',r:'Serveur',tb:'T4, T5'},{n:'Chef Paul',r:'Cuisinier',tb:'Cuisine'},{n:'Rita',r:'Comptoir',tb:'Bar'}],
-ev:['Live Afro-Jazz · Terrasse · VEN 21 JUIN 19h','Soirée Cocktails Signature · SAM 22 JUIN 20h']});
-window.alert=m=>{const d=document.createElement('div');d.textContent=m;d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#0A0A0A;color:#D4AF37;padding:10px 16px;border-radius:20px;z-index:20;font-size:13px';document.body.appendChild(d);setTimeout(()=>d.remove(),2500)};
-window.confirm=()=>true;
-let S,R=null,L=1,V='home',M=null,Q={},TB='',AD='',DR=0;
-function ld(){try{S=JSON.parse(localStorage.getItem(K))||FX()}catch(e){S=FX()}}
-function sv(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
-ld();addEventListener('storage',()=>{ld();if(!M&&!document.activeElement.matches('input'))rn()});
-const $=s=>S.menu.find(m=>m.id==s),E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const mn=o=>Math.round((Date.now()-o.t0)/6e4),gr=p=>p>=500?'Client VIP':p>=200?'Client fidèle':p>=50?'Client habituel':'Nouveau client';
-const wa=(l,t)=>`<a href="${l}" target="_blank"><button class="w">${t}</button></a>`;
-const wp=(t,n)=>wa(`https://wa.me/${WA}?text=${encodeURIComponent(n||'Bonjour')}`,t);
-function rn(){const a=document.getElementById('app');
- if(!R&&L){a.innerHTML=lp();return}
- if(!R){a.innerHTML=`<header><b>LA DÉTENTE · Restaurant • Bar</b></header><main><div class="c"><h2>Créer mon compte</h2><p>Haute Gamme · Kalemie · depuis 2022. Vous devenez client dès l'inscription.</p><input id="nm" placeholder="Nom complet" value="${E(S.u.n)}"> <input id="em" type="email" placeholder="Email" value="${E(S.u.em||'')}"> <input id="pwd" type="password" placeholder="Mot de passe (4+)"><div class="row"><button class="p" onclick="if(!nm.value.trim()||!em.value.trim()||pwd.value.length<4)return alert('Nom, email et mot de passe (4+) requis');S.u.n=nm.value.trim();S.u.em=em.value.trim();S.u.pw=pwd.value;sv();R='client';rn()">Créer mon compte</button></div></div>
- <div class="c"><h3>Espace personnel</h3><p style="font-size:12px">Démonstration : sans mot de passe. À sécuriser avant la mise en ligne.</p><div class="row">${['Serveur','Cuisinier','Comptoir','Admin'].map(r=>`<button onclick="R='${r}';rn()">${r}</button>`).join('')}</div></div><p style="text-align:center;font-size:12px">Kalemie · Ouvert 10h–23h · +243 970 000 000 · contact@ladetente.cd</p></main>`;return}
- a.innerHTML=`<header><b>La Détente · ${R}</b><span>${R=='client'?'<button onclick="DR=1;rn()">☰</button>':'<button onclick="R=null;rn()">Sortir</button>'}</span></header><main>${R=='client'?cl():sf()}</main>${DR?dr():''}${M?md():''}`}
-function cl(){if(V!='home')return `<button onclick="V='home';rn()">← Retour</button>`+({profil:pf,hist:hi,fid:fi})[V]();
- const ev=S.ev.join('   ✦   ');
- return `<div class="tk"><div>📣 ${E(ev)}</div></div><div class="c"><h3>Événements récents</h3><div class="vd"><div>▶ Soirée Live Band</div><div>▶ Dégustation</div></div></div>
- <div class="c"><button class="p" style="width:100%" onclick="M='menu';Q={};rn()">🍽 Menu du restaurant &amp; boissons</button></div>
- <div class="c"><h3>Places disponibles</h3>${Object.entries(S.pl).map(([k,v])=>`<div class="row"><b>${k}</b><span>${v.max-v.occ} / ${v.max} libres</span></div><div class="bar"><i style="width:${v.occ/v.max*100}%"></i></div>`).join('')}<div class="row"><button class="p" onclick="M='res';rn()">Réserver une place</button></div></div>`}
-function pf(){return `<div class="c"><h3>Profil</h3>${S.u.ph?`<img class="av" src="${S.u.ph}">`:'<div class="av"></div>'}<p><input type="file" accept="image/*" onchange="ph(this)"></p>
- <p>Nom<br><input id="pn" value="${E(S.u.n)}"> <button onclick="S.u.n=pn.value;sv();rn()">Corriger</button></p>
- <p>Nouveau mot de passe<br><input id="pw" type="password"> <button onclick="S.u.pw=pw.value;sv();alert('Mot de passe modifié')">Changer</button></p>
- <button onclick="navigator.clipboard&&navigator.clipboard.writeText(location.href);alert('Lien d\\'invitation copié')">🔗 Inviter des amis</button></div>`}
-function ph(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{S.u.ph=r.result;sv();rn()};r.readAsDataURL(f)}
-function hi(){const l=S.o.filter(o=>o.by=='client');return `<div class="c"><h3>Mes commandes</h3>${l.length?l.map(o=>`<div class="row"><span>#${o.id} · ${o.its.map(i=>i.q+'× '+$(i.id).n).join(', ')}</span><b>${o.tot.toLocaleString('fr')} CDF</b></div>`).join(''):'Aucune commande.'}</div>`}
-function fi(){return `<div class="c"><h3>Fidélité</h3><p><b>${S.u.pts}</b> points · <span class="tag">${gr(S.u.pts)}</span></p><p style="font-size:12px">Nouveau → Habituel (50) → Fidèle (200) → VIP (500). 1 000 CDF = 1 point.</p></div>`}
-function dr(){return `<div class="dr"><button onclick="DR=0;rn()">✕ Fermer</button><button onclick="V='profil';DR=0;rn()">👤 Profil</button><button onclick="V='hist';DR=0;rn()">🧾 Mes commandes</button><button onclick="V='fid';DR=0;rn()">⭐ Mes points · ${gr(S.u.pts)}</button>${wa(WAG,'Groupe WhatsApp')}<br><br>${wp('Service client','Service client')}<br><br>${wp('Livraison à domicile','Je souhaite une livraison à domicile')}<br><br><button onclick="R=null;DR=0;V='home';rn()">Déconnexion</button></div>`}
-function md(){if(M=='res')return `<div class="md"><div><h3>Réserver une place</h3><select id="rz">${Object.keys(S.pl).map(k=>`<option>${k}</option>`)}</select> <input id="rq" type="number" min="1" value="2" style="width:70px"> <input id="rh" type="time" value="20:00"><div class="row"><button onclick="M=null;rn()">Annuler</button><button class="p" onclick="rs()">Confirmer</button></div></div></div>`;
- const l=t=>S.menu.filter(m=>m.t==t).map(m=>`<div class="row"><span>${E(m.n)} · ${m.p.toLocaleString('fr')} CDF ${m.s>0?`<span class="tag g">dispo ${m.s}</span>`:'<span class="tag bad">épuisé</span>'}${m.d?' ⭐':''}</span>${m.s>0?`<span><button onclick="q(${m.id},-1)">−</button> ${Q[m.id]||0} <button onclick="q(${m.id},1)">+</button></span>`:''}</div>`).join('');
- const sv_=R=='client'?`<input id="adv" type="time"> <button onclick="od(1)">Réserver pour plus tard</button>`:`<input id="tb" placeholder="Table (ex: T4)">`;
- return `<div class="md"><div><h3>Menu</h3>${R=='client'?'':'<p style="font-size:12px">Commande au nom du client</p>'}<b>Plats (⭐ = du jour)</b>${l('f')}<b>Boissons</b>${l('d')}<div class="row">${sv_}</div><div class="row"><button onclick="M=null;rn()">Fermer</button><button class="p" onclick="od(0)">Commander maintenant</button></div></div></div>`}
-function q(i,d){const m=$(i);Q[i]=Math.max(0,Math.min(m.s,(Q[i]||0)+d));const t=document.getElementById('tb'),a=document.getElementById('adv');TB=t?t.value:'';AD=a?a.value:'';rn();if(TB)tb.value=TB;if(AD)adv.value=AD}
-function od(adv){const its=Object.entries(Q).filter(([,v])=>v>0).map(([k,v])=>({id:+k,q:v}));if(!its.length)return alert('Sélectionnez au moins un article');
- const tbl=document.getElementById('tb'),ad=document.getElementById('adv');if(adv&&!ad.value)return alert('Choisissez une heure');
- let tot=0,f=0,d=0;its.forEach(i=>{const m=$(i.id);m.s-=i.q;m.x+=i.q;tot+=m.p*i.q;m.t=='f'?f=1:d=1});
- S.o.push({id:S.o.length+1,by:R=='client'?'client':R,tb:tbl?tbl.value||'?':'Client',its,tot,t0:Date.now(),adv:adv?ad.value:'',f:f?'nouveau':null,d:d?'nouveau':null,sv:0});
- if(R=='client')S.u.pts+=Math.floor(tot/1000);sv();M=null;Q={};alert('Commande enregistrée');rn()}
-function rs(){const z=rz.value,n=+rq.value||1,p=S.pl[z];if(p.max-p.occ<n)return alert('Pas assez de places');p.occ+=n;S.rs.push({z,n,h:rh.value,by:S.u.n});sv();M=null;alert('Réservation confirmée');rn()}
-const NX={'nouveau':'en préparation','en préparation':'prêt'};
-function ad_(i,k){S.o[i][k]=NX[S.o[i][k]]||'prêt';sv();rn()}
-function sr(i){S.o[i].sv=1;sv();rn()}
-function nd(id){S.nd.push({m:$(id).n,h:new Date().toLocaleTimeString('fr',{hour:'2-digit',minute:'2-digit'}),by:R});sv();alert('Besoin envoyé à l\'administrateur')}
-function rp(){const t=document.getElementById('rt').value.trim();if(!t)return;S.rp.push({by:R,d:new Date().toLocaleString('fr'),t,ok:0});sv();alert('Rapport envoyé à l\'admin');rn()}
-function vr(i){S.rp[i].ok=1;sv();rn()}
-function rz_(){if(confirm('Réinitialiser toutes les données ?')){S=FX();sv();rn()}}
-function oc(z,d){const p=S.pl[z];p.occ=Math.max(0,Math.min(p.max,p.occ+d));sv();rn()}
-function ca(o,i,k){const its=o.its.filter(x=>!k||$(x.id).t==k).map(x=>x.q+'× '+$(x.id).n).join(', '),late=mn(o)>15,rd=(o.f||'prêt')=='prêt'&&(o.d||'prêt')=='prêt';
- const act=k?(o[k]=='prêt'?'<span class="tag g">prêt</span>':`<button class="p" onclick="ad_(${i},'${k}')">${o[k]=='nouveau'?'Démarrer':'Marquer prêt'}</button>`):`<span class="tag">cuisine: ${o.f||'—'} · bar: ${o.d||'—'}</span> ${rd?`<button class="ok" onclick="sr(${i})">Servi</button>`:''}`;
- return `<div class="row"><span>#${o.id} · ${E(o.tb)} · <span class="${late?'bad':''}">${mn(o)} min${late?' ⚠':''}</span>${o.adv?' · pour '+o.adv:''}<br>${E(its)}</span>${act}</div>`}
-const stk=(t,b)=>`<div class="c"><h3>Stock ${t=='f'?'cuisine':t=='d'?'comptoir':''}</h3><table>${S.menu.filter(m=>!t||m.t==t).map(m=>`<tr><td>${E(m.n)}</td><td class="${m.s<5?'bad':''}">${m.s} restant</td><td>${m.x} vendu</td>${b?`<td><button onclick="nd(${m.id})">Signaler</button></td>`:''}</tr>`).join('')}</table></div>`;
-function sf(){const A=S.o.map((o,i)=>[o,i]).filter(([o])=>!o.sv);let h='';
- const lst=k=>{const l=A.filter(([o])=>k?o[k]:1);return l.length?l.map(([o,i])=>ca(o,i,k)).join(''):'Aucune commande.'};
- if(R=='Serveur'){const me=S.st.filter(x=>x.r=='Serveur').map(x=>`${x.n} : ${x.tb}`).join(' · ');
-  h=`<div class="c"><h3>Mes tables</h3><p>${E(me)}</p><button class="p" onclick="M='menu';Q={};rn()">+ Nouvelle commande</button></div><div class="c"><h3>Commandes en cours</h3>${lst()}</div><div class="c"><h3>Plats prêts à servir</h3>${A.filter(([o])=>o.f=='prêt').map(([o])=>`#${o.id} ${E(o.tb)}`).join(' · ')||'—'}</div>${stk('',0)}`}
- if(R=='Cuisinier')h=`<div class="c"><h3>Commandes cuisine</h3>${lst('f')}</div>${stk('f',1)}`;
- if(R=='Comptoir')h=`<div class="c"><h3>Commandes boissons</h3>${lst('d')}</div>${stk('d',1)}`;
- if(R=='Admin'){const oc_=Object.values(S.pl).reduce((a,p)=>a+p.occ,0),mx=Object.values(S.pl).reduce((a,p)=>a+p.max,0),lt=A.filter(([o])=>mn(o)>15).length;
-  h=`<div class="c"><div class="row"><span>Places occupées <b>${oc_}/${mx}</b></span><span>Commandes actives <b>${A.length}</b></span><span class="${lt?'bad':''}">En retard <b>${lt}</b></span></div><div class="row">${wa(WAS,'Groupe WhatsApp personnel')}</div></div>
-  <div class="c"><h3>Places</h3>${Object.entries(S.pl).map(([k,v])=>`<div class="row"><b>${k}</b> ${v.occ}/${v.max} <span><button onclick="oc('${k}',-1)">−</button> <button onclick="oc('${k}',1)">+</button></span></div>`).join('')}<p style="font-size:12px">Réservations : ${S.rs.map(r=>`${E(r.by)} ${r.n}p ${r.z} ${r.h}`).join(' · ')||'aucune'}</p></div>
-  <div class="c"><h3>Commandes (délai cible 15 min)</h3>${lst()}</div><div class="c"><h3>Besoins signalés</h3>${S.nd.map(n=>`<div>${n.h} · ${E(n.by)} : manque ${E(n.m)}</div>`).join('')||'Aucun'}</div>${stk('',0)}
-  <div class="c"><h3>Personnel &amp; tâches</h3><table>${S.st.map(x=>`<tr><td>${E(x.n)}</td><td>${x.r}</td><td>${E(x.tb)}</td><td>${wp('WhatsApp','Bonjour '+x.n+', point sur votre service')}</td></tr>`).join('')}</table></div>
-  <div class="c"><h3>Rapports journaliers</h3>${S.rp.map((r,i)=>`<div class="row"><span><b>${r.by}</b> · ${r.d}<br>${E(r.t)}</span>${r.ok?'<span class="tag g">vérifié</span>':`<button class="ok" onclick="vr(${i})">Vérifier</button>`}</div>`).join('')||'Aucun'}</div><button onclick="rz_()">Réinitialiser la démo</button>`}
- else h+=`<div class="c"><h3>Mon rapport du jour</h3><textarea id="rt" rows="4" style="width:100%" placeholder="Résumé de ma journée…"></textarea><div class="row"><button class="p" onclick="rp()">Envoyer à l'admin</button>${wp('WhatsApp admin','Message de '+R)}${wa(WAS,'Groupe personnel')}</div></div>`;
- return h}
-function lp(){const sg=[['Moambe Royale',28000,'Best-seller'],['Tanganyika Catch',32000,'Pêche du jour'],['Cocktail Détente',12000,'Bar']];
- return `<header><b>LA DÉTENTE</b><button class="p" onclick="L=0;rn()">Espace membre</button></header><div class="hero"><small>RESTAURANT • BAR · KALEMIE · DEPUIS 2022</small><h1>Une adresse d'exception à Kalemie</h1><p>Cuisine locale revisitée, bar premium et terrasse sous les étoiles.</p><button class="p" onclick="L=0;rn()">Créer mon compte</button> <button onclick="L=0;rn()">Me connecter</button><div class="row" style="justify-content:center;gap:24px;margin-top:22px"><span><b style="color:var(--g)">500+</b><br>clients / mois</span><span><b style="color:var(--g)">4.9★</b><br>note Google</span><span><b style="color:var(--g)">02</b><br>terrasses</span></div></div><main>
- <h2 style="margin-top:8px">L'Expérience</h2><div class="gr"><div class="c"><h3>Cuisine d'Auteur</h3>Poulet moambe signature, poissons du lac, fufu aérien.</div><div class="c"><h3>Bar Premium</h3>Cocktails infusés, spiritueux rares et bières locales toujours fraîches.</div><div class="c"><h3>Ambiance Curatée</h3>Playlist afro-chic, lumière tamisée, terrasse avec vue. Idéal afterwork &amp; soirées.</div></div>
- <h2>Nos Signatures</h2><div class="gr">${sg.map(x=>`<div class="c"><span class="tag">${x[2]}</span><h3>${x[0]}</h3><b style="color:var(--g)">${x[1].toLocaleString('fr')} CDF</b></div>`).join('')}</div><div class="row" style="justify-content:center"><button onclick="L=0;rn()">Voir la carte complète →</button></div>
- <h2>Événements à venir</h2>${S.ev.map(e=>`<div class="c">📅 ${E(e)}</div>`).join('')}
- <h2>Contact</h2><div class="c">Kalemie · Ouvert 10h–23h<br>+243 970 000 000 · +243 971 234 567<br>contact@ladetente.cd<div class="row">${wp('Écrire sur WhatsApp','Bonjour La Détente')}<button class="p" onclick="L=0;rn()">Réserver / Commander</button></div></div></main><div class="ft">LA DÉTENTE • HAUTE GAMME • FAIT AVEC ♥ À KALEMIE</div>`}
-rn();
+.md{position:fixed;inset:0;background:#000a;z-index:9;display:flex;align-items:flex-end;justify-content:center}.md>div{background:var(--bg);width:100%;max-width:820px;max-height:90%;overflow:auto;padding:14px;border-radius:16px 16px 0 0}
+.dr{position:fixed;top:0;right:0;bottom:0;width:80%;max-width:310px;background:var(--bg);z-index:8;padding:16px;box-shadow:-4px 0 20px #0006;overflow:auto}
+.dr button,.dr a button{display:block;width:100%;text-align:left;margin-bottom:8px}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:5px;border-bottom:1px solid var(--bd);text-align:left}
+.av{width:72px;height:72px;border-radius:50%;background:var(--g);object-fit:cover;display:block}
+.hero{background:radial-gradient(circle at 70% 20%,#3a3012,#0A0A0A 70%);color:#F9F7F0;padding:60px 18px;text-align:center}.hero h1{font:600 32px 'Playfair Display',serif;color:var(--g);margin:10px 0}.hero small{letter-spacing:.2em;color:var(--g)}
+.gr{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.ft{background:#0A0A0A;color:#F9F7F0;text-align:center;padding:24px 14px;font-size:12px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin:2px}
+</style></head><body><div id="app">Chargement…</div>
+<script type="module">
+import{initializeApp}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import{getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,sendPasswordResetEmail,updatePassword}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import{getFirestore,collection,doc,onSnapshot,setDoc,addDoc,updateDoc,deleteDoc,increment,writeBatch,query,where,orderBy,limit,getDoc}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+const app=initializeApp({apiKey:"AIzaSyAsgIGpv3A1pS7iVlPuM-Fz35e2Xj6V2HE",authDomain:"ladetente-5ebf4.firebaseapp.com",projectId:"ladetente-5ebf4",storageBucket:"ladetente-5ebf4.firebasestorage.app",messagingSenderId:"117942793709",appId:"1:117942793709:web:0e7ba3d7d4d39cc7d2a3e4"});
+const au=getAuth(app),db=getFirestore(app),A={},$=i=>document.getElementById(i);
+const REF=new URLSearchParams(location.search).get('ref')||'';
+let AU=null,ME=null,R=null,L=1,V='home',M=null,Q={},DR=0,AM='in',TB='',AD='',subs=[],rsub=[];
+const D={menu:[],pl:[],ev:[],vd:[],ord:[],res:[],nd:[],rp:[],us:[],cfg:{},adm:true};
+const E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const F=n=>(+n||0).toLocaleString('fr')+' CDF',mn=o=>Math.round((Date.now()-o.t0)/6e4),gr=p=>p>=500?'Client VIP':p>=200?'Client fidèle':p>=50?'Client habituel':'Nouveau client';
+const B=(a,t,p,c)=>`<button class="${c||''}" data-a="${a}" data-p="${E(p??'')}">${t}</button>`;
+const wl=(t,m,n)=>`<a href="https://wa.me/${n||D.cfg.wa||'243970000000'}?text=${encodeURIComponent(m||'Bonjour')}" target="_blank" rel="noopener"><button class="w">${t}</button></a>`;
+const wg=(t,l)=>`<a href="${E(l||'https://wa.me/'+(D.cfg.wa||'243970000000'))}" target="_blank" rel="noopener"><button class="w">${t}</button></a>`;
+const toast=m=>{const d=document.createElement('div');d.textContent=m;d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#0A0A0A;color:#D4AF37;padding:10px 16px;border-radius:20px;z-index:30;font-size:13px;max-width:90%;text-align:center';document.body.appendChild(d);setTimeout(()=>d.remove(),3200)};
+const er=x=>({'auth/invalid-credential':'Email ou mot de passe incorrect','auth/email-already-in-use':'Cet email a déjà un compte','auth/weak-password':'Mot de passe trop court (6 minimum)','auth/invalid-email':'Email invalide','auth/requires-recent-login':'Reconnectez-vous puis réessayez','permission-denied':'Accès refusé (règles Firestore)'}[x.code]||x.message||'Erreur');
+const sorted=(a,k)=>[...a].sort((x,y)=>(x[k]>y[k]?1:-1));
+const D_wa=()=>D.cfg.wa||'243970000000';
+const MT=id=>D.menu.find(m=>m.id==id)||{n:'?',p:0,t:'f'};
+// ---------- données en direct ----------
+const lis=(c,k,q)=>onSnapshot(q||collection(db,c),s=>{D[k]=s.docs.map(d=>({id:d.id,...d.data()}));up()},e=>console.warn(c,e.code));
+const up=()=>{if(!M&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName))rn()};
+lis('menu','menu');lis('places','pl');lis('events','ev');lis('videos','vd');
+onSnapshot(doc(db,'cfg','main'),s=>{D.cfg=s.data()||{};up()},()=>{});
+getDoc(doc(db,'meta','admin')).then(s=>{D.adm=s.exists();up()}).catch(()=>{});
+onAuthStateChanged(au,u=>{AU=u;subs.forEach(f=>f());rsub.forEach(f=>f());subs=[];rsub=[];ME=null;R=null;D.ord=[];D.res=[];D.nd=[];D.rp=[];D.us=[];V='home';
+ if(!u){rn();return}
+ subs.push(onSnapshot(doc(db,'users',u.uid),s=>{ME=s.exists()?{id:u.uid,...s.data()}:null;const nr=ME?ME.role:null;if(nr!==R){R=nr;rsub.forEach(f=>f());rsub=[];if(R)roleLis()}up()},e=>console.warn(e.code)))});
+function roleLis(){const u=AU.uid,w=(c,k,q)=>rsub.push(lis(c,k,q));
+ if(R=='client'){w('orders','ord',query(collection(db,'orders'),where('uid','==',u)));w('res','res',query(collection(db,'res'),where('uid','==',u)))}
+ else{w('orders','ord',query(collection(db,'orders'),orderBy('t0','desc'),limit(200)));w('res','res');w('needs','nd');
+  w('reports','rp',R=='admin'?collection(db,'reports'):query(collection(db,'reports'),where('uid','==',u)));if(R=='admin')w('users','us')}}
+// ---------- rendu ----------
+function rn(){const a=$('app');
+ if(!AU){a.innerHTML=L?lp():`<header><b>LA DÉTENTE</b>${B('l1','← Accueil')}</header><main>${aus()}</main>`;return}
+ if(!ME){a.innerHTML='<main><div class="c">Chargement du compte…</div></main>';return}
+ a.innerHTML=`<header><b>LA DÉTENTE${R=='client'?'':' · '+E(R)}</b>${R=='client'?B('dr','☰'):B('out','Sortir')}</header><main>${R=='client'?cl():sf()}</main>${DR?dr():''}${M?md():''}`}
+function lp(){const sg=D.menu.filter(m=>m.d).slice(0,3),s3=sg.length?sg:[{n:'Moambe Royale',p:28000},{n:'Tanganyika Catch',p:32000},{n:'Cocktail Détente',p:12000}];
+ return `<header><b>LA DÉTENTE</b>${B('l0','Espace membre','','p')}</header><div class="hero"><small>RESTAURANT • BAR · KALEMIE · DEPUIS 2022</small><h1>Une adresse d'exception à Kalemie</h1><p>Cuisine locale revisitée, bar premium et terrasse sous les étoiles.</p>${B('l0','Créer mon compte','','p')} ${B('l0','Me connecter')}</div><main>
+<h2>L'Expérience</h2><div class="gr"><div class="c"><h3>Cuisine d'Auteur</h3>Poulet moambe signature, poissons du lac, fufu aérien.</div><div class="c"><h3>Bar Premium</h3>Cocktails infusés, spiritueux rares et bières locales toujours fraîches.</div><div class="c"><h3>Ambiance Curatée</h3>Playlist afro-chic, lumière tamisée, terrasse avec vue.</div></div>
+<h2>Nos Signatures</h2><div class="gr">${s3.map(x=>`<div class="c"><h3>${E(x.n)}</h3><b style="color:var(--g)">${F(x.p)}</b></div>`).join('')}</div>
+<h2>Événements à venir</h2>${(D.ev.length?sorted(D.ev,'o').map(e=>e.t):['Live Afro-Jazz · Terrasse · VEN 21 JUIN 19h','Soirée Cocktails Signature · SAM 22 JUIN 20h']).map(e=>`<div class="c">📅 ${E(e)}</div>`).join('')}
+<h2>Contact</h2><div class="c">Kalemie · Ouvert 10h–23h<br>+243 970 000 000 · +243 971 234 567<br>contact@ladetente.cd<div class="row">${wl('Écrire sur WhatsApp','Bonjour La Détente')}${B('l0','Réserver / Commander','','p')}</div></div></main><div class="ft">LA DÉTENTE • HAUTE GAMME • FAIT AVEC ♥ À KALEMIE</div>`}
+function aus(){return `<div class="c"><div class="row"><h3>${AM=='in'?'Connexion':'Créer mon compte'}</h3>${B('am',AM=='in'?'Créer un compte':"J'ai déjà un compte",AM=='in'?'up':'in')}</div>${AM=='up'?'<input id="nm" placeholder="Nom complet" autocomplete="name">':''}<input id="em" type="email" placeholder="Email" autocomplete="email"><input id="pw" type="password" placeholder="Mot de passe (6 minimum)" autocomplete="current-password"><div class="row">${B('go',AM=='in'?'Me connecter':'Créer mon compte','','p')}${AM=='in'?B('fg','Mot de passe oublié'):''}</div>${AM=='up'?'<p style="font-size:12px">Vous devenez client dès l\'inscription. Le personnel est nommé par l\'administrateur.</p>':''}${!D.adm&&AM=='up'?B('own','Premier lancement : créer le compte propriétaire (admin)','','dg'):''}</div>`}
+const ticker=()=>`<div class="tk"><div>📣 ${E((D.ev.length?sorted(D.ev,'o').map(e=>e.t):['Bienvenue à La Détente']).join('   ✦   '))}</div></div>`;
+const ytb=u=>{const m=String(u).match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([\w-]{11})/);return m?m[1]:''};
+function cl(){if(V!='home')return B('hm','← Retour')+({profil:pf,hist:hi,fid:fi})[V]();
+ const vd=sorted(D.vd,'o').slice(-4).reverse();
+ return `${ticker()}<div class="c"><h3>Événements récents</h3><div class="vd">${vd.length?vd.map(v=>`<div>${ytb(v.u)?`<iframe src="https://www.youtube-nocookie.com/embed/${ytb(v.u)}" allowfullscreen loading="lazy"></iframe>`:'▶ '+E(v.t)}</div>`).join(''):'<div>▶ Vidéos bientôt</div>'}</div></div>
+<div class="c">${B('mm','🍽 Menu du restaurant &amp; boissons','','p" style="width:100%')}</div>
+<div class="c"><h3>Places disponibles</h3>${D.pl.map(v=>`<div class="row"><b>${E(v.id)}</b><span>${v.max-v.occ} / ${v.max} libres</span></div><div>${Array.from({length:v.max},(_,i)=>`<i class="dot" style="background:${i<v.occ?'#c0392b':'#1B8C4A'}"></i>`).join('')}</div>`).join('')||'Places bientôt disponibles'}<div class="row">${B('mr','Réserver une place','','p')}</div></div>`}
+function pf(){return `<div class="c"><h3>Profil</h3>${ME.ph?`<img class="av" src="${ME.ph}">`:'<div class="av"></div>'}<p><input type="file" accept="image/*" id="fi"> ${B('ph','Changer la photo')}</p><p>Nom (corriger si mal écrit)<br><input id="pn" value="${E(ME.name)}"> ${B('pn','Enregistrer')}</p><p>Nouveau mot de passe<br><input id="pp" type="password"> ${B('pp','Changer')}</p>${B('inv','🔗 Inviter des amis')}</div>`}
+function hi(){const l=sorted(D.ord,'t0').reverse();return `<div class="c"><h3>Mes commandes</h3>${l.map(o=>`<div class="row"><span>${new Date(o.t0).toLocaleDateString('fr')} · ${o.its.map(i=>i.q+'× '+E(i.n)).join(', ')}${o.adv?' · pour '+o.adv:''}<br><span class="tag">${o.sv?'servie':'en cours'}</span></span><b>${F(o.tot)}</b></div>`).join('')||'Aucune commande.'}</div>`}
+function fi(){return `<div class="c"><h3>Mes points de fidélité</h3><p><b>${ME.pts}</b> points · <span class="tag">${gr(ME.pts)}</span></p><p style="font-size:12px">Nouveau → Habituel (50) → Fidèle (200) → VIP (500). 1 000 CDF dépensés = 1 point, crédité quand la commande est servie.</p></div>`}
+function dr(){return `<div class="dr">${B('dr','✕ Fermer')}${B('pg','👤 Profil','profil')}${B('pg','🧾 Mes commandes','hist')}${B('pg','⭐ Mes points · '+gr(ME.pts),'fid')}${wg('Groupe WhatsApp',D.cfg.wag)}<br><br>${wl('Service clients','Bonjour, service clients')}<br><br>${wl('Livraison à domicile','Je souhaite une livraison à domicile : ')}<br><br>${B('out','Déconnexion')}</div>`}
+function md(){if(M=='res')return `<div class="md"><div><h3>Réserver une place</h3><select id="rz">${D.pl.map(p=>`<option value="${E(p.id)}">${E(p.id)} (${p.max-p.occ} libres)</option>`).join('')}</select> <input id="rq" type="number" min="1" value="2"> <input id="rh" type="time" value="20:00"><div class="row">${B('mc','Annuler')}${B('rs','Confirmer','','p')}</div></div></div>`;
+ const l=t=>D.menu.filter(m=>m.t==t).map(m=>`<div class="row"><span>${E(m.n)} · ${F(m.p)} ${m.s>0?`<span class="tag g">dispo ${m.s}</span>`:'<span class="tag bad">épuisé</span>'}${m.d?' ⭐':''}</span>${m.s>0?`<span>${B('q','−',m.id+'|-1')} ${Q[m.id]||0} ${B('q','+',m.id+'|1')}</span>`:''}</div>`).join('')||'—';
+ return `<div class="md"><div><h3>Menu</h3><b>Plats (⭐ = à l'ordre du jour)</b>${l('f')}<b>Boissons</b>${l('d')}<div class="row">${R=='client'?`<input id="adv" type="time" value="${E(AD)}" style="width:auto"> ${B('od','Réserver pour plus tard','1')}`:`<input id="tb" placeholder="Table (ex: T4)" value="${E(TB)}">`}</div><div class="row">${B('mc','Fermer')}${B('od','Commander maintenant','0','p')}</div></div></div>`}
+// ---------- espaces du personnel ----------
+const act=()=>D.ord.filter(o=>!o.sv);
+function ca(o,k){const its=o.its.filter(x=>!k||x.t==k).map(x=>x.q+'× '+E(x.n)).join(', '),late=mn(o)>15,rd=(o.f||'prêt')=='prêt'&&(o.d||'prêt')=='prêt';
+ const a=k?(o[k]=='prêt'?'<span class="tag g">prêt</span>':B('ad',o[k]=='nouveau'?'Démarrer':'Marquer prêt',o.id+'|'+k,'p')):`<span class="tag">cuisine: ${o.f||'—'} · bar: ${o.d||'—'}</span> ${rd&&R!='admin'?B('sr','Servi',o.id,'ok'):''}`;
+ return `<div class="row"><span>#${o.id.slice(-4)} · ${E(o.tb)} · ${E(o.srv||o.cl||'')} · <span class="${late?'bad':''}">${mn(o)} min${late?' ⚠':''}</span>${o.adv?' · pour '+o.adv:''}<br>${its}</span>${a}</div>`}
+const lst=k=>{const l=sorted(act().filter(o=>!k||o[k]),'t0').map(o=>ca(o,k)).join('');return l||'Aucune commande.'};
+const stk=(t,b)=>`<div class="c"><h3>Stock ${t=='f'?'cuisine':t=='d'?'comptoir':'(cuisine + comptoir)'}</h3><table>${D.menu.filter(m=>!t||m.t==t).map(m=>`<tr><td>${E(m.n)}</td><td class="${m.s<5?'bad':''}">${m.s} restant</td><td>${m.x||0} conso.</td><td>${b=='n'?B('stk','Stock',m.id)+B('nd','Signaler',m.id):b=='a'?B('stk','Modifier',m.id)+B('dy',m.d?'⭐ off':'⭐ on',m.id)+B('dm','✕',m.id,'dg'):''}</td></tr>`).join('')}</table></div>`;
+const rpt=()=>`<div class="c"><h3>Mon rapport journalier</h3><textarea id="rt" rows="4" placeholder="Résumé de ma journée…"></textarea><div class="row">${B('rp','Envoyer à l\'admin','','p')}${wl('WhatsApp admin','Message de '+ME.name+' ('+R+')')}${wg('Groupe WhatsApp personnel',D.cfg.was)}</div>${D.rp.filter(r=>R!='admin').slice(-3).map(r=>`<div style="font-size:12px">${E(r.d)} · ${r.ok?'✓ vérifié':'en attente'}</div>`).join('')}</div>`;
+function sf(){let h='';const A_=act();
+ if(R=='serveur'){const t1=D.ord.filter(o=>Date.now()-o.t0<36e5).reduce((a,o)=>a+o.its.reduce((b,i)=>b+i.q,0),0),top={};D.ord.filter(o=>new Date(o.t0).toDateString()==new Date().toDateString()).forEach(o=>o.its.forEach(i=>top[i.n]=(top[i.n]||0)+i.q));
+  const tb={};A_.forEach(o=>{(tb[o.tb]=tb[o.tb]||{n:0,t:0}).n++;tb[o.tb].t+=o.tot});
+  h=`<div class="c"><h3>Mes tables</h3><p>${E(ME.tb||'Aucune table assignée (l\'admin les attribue)')}</p>${B('mm','+ Nouvelle commande','','p')}</div><div class="c"><h3>Tables en cours</h3>${Object.entries(tb).map(([k,v])=>`<div class="row"><b>${E(k)}</b><span>${v.n} cmd · ${F(v.t)}</span></div>`).join('')||'—'}</div><div class="c"><h3>Commandes en cours</h3>${lst()}</div><div class="c"><h3>Plats prêts à servir</h3>${A_.filter(o=>o.f=='prêt').map(o=>'#'+o.id.slice(-4)+' '+E(o.tb)).join(' · ')||'—'}</div><div class="c"><h3>Rythme de consommation</h3>${t1} articles sur la dernière heure<br>${Object.entries(top).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([n,q])=>E(n)+' ×'+q).join(' · ')||'—'}</div>${stk('',0)}`}
+ if(R=='cuisinier')h=`<div class="c"><h3>Commandes cuisine</h3>${lst('f')}</div>${stk('f','n')}`;
+ if(R=='comptoir')h=`<div class="c"><h3>Commandes boissons</h3>${lst('d')}</div>${stk('d','n')}<p style="font-size:12px">Besoins en outils : signalez-les à l'admin par WhatsApp.</p>`;
+ if(R=='admin')return adm();
+ return h+rpt()}
+function adm(){const A_=act(),oc=D.pl.reduce((a,p)=>a+p.occ,0),mx=D.pl.reduce((a,p)=>a+p.max,0),lt=A_.filter(o=>mn(o)>15).length,dn=D.ord.filter(o=>o.sv&&o.te);
+ const ok=dn.filter(o=>(o.te-o.t0)/6e4<=15).length;
+ return `<div class="c"><div class="row"><span>Places occupées <b>${oc}/${mx}</b></span><span>Actives <b>${A_.length}</b></span><span class="${lt?'bad':''}">En retard <b>${lt}</b></span><span>Servies à temps <b>${ok}/${dn.length}</b></span></div><div class="row">${wg('Groupe WhatsApp personnel',D.cfg.was)}${!D.menu.length?B('init','Initialiser menu, places et événements','','p'):''}</div></div>
+<div class="c"><h3>Places</h3>${D.pl.map(v=>`<div class="row"><b>${E(v.id)}</b> ${v.occ}/${v.max}<span>${B('oc','−',v.id+'|-1')} ${B('oc','+',v.id+'|1')} ${B('mx','Capacité',v.id)}</span></div>`).join('')}<p style="font-size:12px">Réservations : ${D.res.filter(r=>!r.done).map(r=>`${E(r.name)} ${r.n}p ${E(r.z)} ${E(r.h)} ${B('rd','Libérer',r.id)}`).join('<br>')||'aucune'}</p></div>
+<div class="c"><h3>Commandes en direct (cible : 15 min)</h3>${lst()}</div>
+<div class="c"><h3>Besoins signalés</h3>${sorted(D.nd,'t0').reverse().map(n=>`<div class="row"><span>${new Date(n.t0).toLocaleTimeString('fr',{hour:'2-digit',minute:'2-digit'})} · ${E(n.by)} (${n.role}) : manque ${E(n.m)}</span>${B('dn','OK',n.id)}</div>`).join('')||'Aucun'}</div>
+${stk('','a')}<div class="c">${B('am_','+ Article au menu','','p')}</div>
+<div class="c"><h3>Personnel &amp; tâches</h3>${D.us.map(u=>`<div class="row"><span><b>${E(u.name)}</b> · ${E(u.email)}<br>Tâches/tables : ${E(u.tb||'—')} · ${E(u.tel||'pas de n°')}</span><span><select data-c="role" data-p="${u.id}">${['client','serveur','cuisinier','comptoir','admin'].map(r=>`<option${r==u.role?' selected':''}>${r}</option>`).join('')}</select> ${B('tb','Tâches',u.id)} ${B('tel','N°',u.id)} ${u.role!='client'?`<a href="https://wa.me/${(u.tel||D_wa()).replace(/\D/g,'')}?text=${encodeURIComponent('Bonjour '+u.name+', point sur votre service')}" target="_blank" rel="noopener"><button class="w">WhatsApp</button></a>`:''}</span></div>`).join('')}</div>
+<div class="c"><h3>Événements (bande défilante)</h3>${D.ev.map(e=>`<div class="row">${E(e.t)} ${B('dev','✕',e.id,'dg')}</div>`).join('')}${B('aev','+ Événement','','p')}</div>
+<div class="c"><h3>Vidéos (liens YouTube)</h3>${D.vd.map(v=>`<div class="row">${E(v.t)} ${B('dvd','✕',v.id,'dg')}</div>`).join('')}${B('avd','+ Vidéo','','p')}</div>
+<div class="c"><h3>Réglages WhatsApp</h3><div class="row">${B('cfg','N° service clients','wa')}${B('cfg','Lien groupe clients','wag')}${B('cfg','Lien groupe personnel','was')}</div></div>
+<div class="c"><h3>Rapports journaliers</h3>${sorted(D.rp,'t0').reverse().map(r=>`<div class="row"><span><b>${E(r.name)}</b> (${r.role}) · ${E(r.d)}<br>${E(r.t)}</span>${r.ok?'<span class="tag g">vérifié</span>':B('vr','Vérifier',r.id,'ok')}</div>`).join('')||'Aucun'}</div>`}
+// ---------- actions ----------
+async function reg(own){const e=$('em').value.trim(),p=$('pw').value,n=$('nm').value.trim();if(!n)return toast('Nom requis');const c=await createUserWithEmailAndPassword(au,e,p),u={name:n,email:e,role:own?'admin':'client',pts:0,ph:'',tb:'',tel:'',ref:REF,t0:Date.now()};
+ if(own){const b=writeBatch(db);b.set(doc(db,'users',c.user.uid),u);b.set(doc(db,'meta','admin'),{uid:c.user.uid,t0:Date.now()});await b.commit()}else await setDoc(doc(db,'users',c.user.uid),u)}
+const tmp=()=>{TB=$('tb')?$('tb').value:TB;AD=$('adv')?$('adv').value:AD};
+const upd=(c,i,o)=>updateDoc(doc(db,c,i),o);
+document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(b&&A[b.dataset.a])Promise.resolve(A[b.dataset.a](b.dataset.p,b)).catch(x=>toast(er(x)))});
+document.addEventListener('change',e=>{const s=e.target.closest('[data-c]');if(s&&R=='admin')upd('users',s.dataset.p,{role:s.value}).then(()=>toast('Rôle modifié')).catch(x=>toast(er(x)))});
+Object.assign(A,{
+l0:()=>{L=0;rn()},l1:()=>{L=1;rn()},am:p=>{AM=p;rn()},hm:()=>{V='home';rn()},pg:p=>{V=p;DR=0;rn()},dr:()=>{DR=DR?0:1;rn()},out:()=>{DR=0;signOut(au)},
+go:async()=>{const e=$('em').value.trim(),p=$('pw').value;if(AM=='in')await signInWithEmailAndPassword(au,e,p);else await reg(false)},own:()=>reg(true),
+fg:async()=>{const e=$('em').value.trim();if(!e)return toast("Entrez d'abord votre email");await sendPasswordResetEmail(au,e);toast('Email de réinitialisation envoyé')},
+mm:()=>{M='menu';Q={};TB='';AD='';rn()},mr:()=>{M='res';rn()},mc:()=>{M=null;rn()},
+q:p=>{tmp();const[i,d]=p.split('|');Q[i]=Math.max(0,Math.min(MT(i).s,(Q[i]||0)+ +d));rn()},
+od:async p=>{tmp();const its=D.menu.filter(m=>Q[m.id]>0).map(m=>({id:m.id,n:m.n,t:m.t,p:m.p,q:Q[m.id]}));if(!its.length)return toast('Choisissez au moins un article');const adv=p=='1';if(adv&&!AD)return toast('Choisissez une heure');
+ await addDoc(collection(db,'orders'),{uid:ME.id,cl:ME.name,by:R,srv:R=='client'?'':ME.name,tb:R=='client'?'Client':(TB||'?'),its,tot:its.reduce((a,i)=>a+i.p*i.q,0),t0:Date.now(),adv:adv?AD:'',f:its.some(i=>i.t=='f')?'nouveau':null,d:its.some(i=>i.t=='d')?'nouveau':null,sv:0});
+ await Promise.all(its.map(i=>upd('menu',i.id,{s:increment(-i.q),x:increment(i.q)})));M=null;Q={};AD='';TB='';toast('Commande envoyée');rn()},
+rs:async()=>{const z=$('rz').value,n=+$('rq').value||1,pl=D.pl.find(x=>x.id==z);if(!pl||pl.max-pl.occ<n)return toast('Pas assez de places');await addDoc(collection(db,'res'),{uid:ME.id,name:ME.name,z,n,h:$('rh').value,t0:Date.now(),done:0});await upd('places',z,{occ:increment(n)});M=null;toast('Réservation confirmée');rn()},
+ph:()=>{const f=$('fi').files[0];if(!f)return toast('Choisissez une photo');const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas'),k=Math.min(im.width,im.height);c.width=c.height=160;c.getContext('2d').drawImage(im,(im.width-k)/2,(im.height-k)/2,k,k,0,0,160,160);upd('users',ME.id,{ph:c.toDataURL('image/jpeg',.7)}).then(()=>toast('Photo enregistrée'))};im.src=r.result};r.readAsDataURL(f)},
+pn:()=>upd('users',ME.id,{name:$('pn').value.trim()}).then(()=>toast('Nom corrigé')),
+pp:async()=>{const v=$('pp').value;if(v.length<6)return toast('6 caractères minimum');await updatePassword(au.currentUser,v);toast('Mot de passe modifié')},
+inv:async()=>{const u=location.origin+location.pathname+'?ref='+ME.id,t='Rejoins-moi à La Détente, Kalemie : '+u;if(navigator.share){try{await navigator.share({title:'La Détente',text:t,url:u});return}catch(e){}}window.open('https://wa.me/?text='+encodeURIComponent(t))},
+ad:p=>{const[i,k]=p.split('|'),o=D.ord.find(x=>x.id==i);return upd('orders',i,{[k]:o[k]=='nouveau'?'en préparation':'prêt'})},
+sr:async i=>{const o=D.ord.find(x=>x.id==i);await upd('orders',i,{sv:1,te:Date.now()});if(o.by=='client')await upd('users',o.uid,{pts:increment(Math.floor(o.tot/1000))})},
+nd:async i=>{await addDoc(collection(db,'needs'),{by:ME.name,role:R,m:MT(i).n,t0:Date.now()});toast("Besoin envoyé à l'administrateur")},
+rp:async()=>{const t=$('rt').value.trim();if(!t)return;await addDoc(collection(db,'reports'),{uid:ME.id,name:ME.name,role:R,d:new Date().toLocaleDateString('fr'),t,ok:0,t0:Date.now()});$('rt').value='';toast("Rapport envoyé à l'admin")},
+vr:i=>upd('reports',i,{ok:1}),dn:i=>deleteDoc(doc(db,'needs',i)),
+oc:p=>{const[i,d]=p.split('|'),v=D.pl.find(x=>x.id==i);return upd('places',i,{occ:Math.max(0,Math.min(v.max,v.occ+ +d))})},
+mx:i=>{const v=prompt('Capacité de '+i,D.pl.find(x=>x.id==i).max);if(v)return upd('places',i,{max:+v})},
+rd:async i=>{const r=D.res.find(x=>x.id==i),v=D.pl.find(x=>x.id==r.z);await upd('res',i,{done:1});if(v)await upd('places',r.z,{occ:Math.max(0,v.occ-r.n)})},
+stk:i=>{const v=prompt('Nouveau stock de '+MT(i).n,MT(i).s);if(v)return upd('menu',i,{s:+v})},
+dy:i=>upd('menu',i,{d:MT(i).d?0:1}),dm:i=>{if(confirm('Supprimer cet article ?'))return deleteDoc(doc(db,'menu',i))},
+am_:()=>{const n=prompt("Nom de l'article");if(!n)return;const t=prompt('Type : f (plat) ou d (boisson)','f')=='d'?'d':'f',p=+prompt('Prix en CDF','10000'),s=+prompt('Stock','20');return setDoc(doc(db,'menu',String(Date.now())),{n,t,p,s,d:0,x:0})},
+tb:i=>{const v=prompt('Tables / tâches de cet employé',D.us.find(u=>u.id==i).tb||'');if(v!==null)return upd('users',i,{tb:v})},
+tel:i=>{const v=prompt('N° WhatsApp (ex : 243970000000)',D.us.find(u=>u.id==i).tel||'');if(v!==null)return upd('users',i,{tel:v.replace(/\D/g,'')})},
+aev:()=>{const t=prompt('Événement (ex : Live Afro-Jazz · VEN 21 JUIN 19h)');if(t)return addDoc(collection(db,'events'),{t,o:Date.now()})},dev:i=>deleteDoc(doc(db,'events',i)),
+avd:()=>{const t=prompt('Titre de la vidéo'),u=prompt('Lien YouTube');if(t&&ytb(u))return addDoc(collection(db,'videos'),{t,u,o:Date.now()});toast('Lien YouTube invalide')},dvd:i=>deleteDoc(doc(db,'videos',i)),
+cfg:p=>{const v=prompt('Nouvelle valeur',D.cfg[p]||'');if(v!==null)return setDoc(doc(db,'cfg','main'),{[p]:p=='wa'?v.replace(/\D/g,''):v.trim()},{merge:true})},
+init:async()=>{const b=writeBatch(db),m=[['Moambe Royale','f',28000,20,1],['Tanganyika Catch (pêche du jour)','f',32000,12,1],['Poulet Moambe','f',18000,25,0],['Brochettes Mix','f',22000,20,0],['Poisson Salé','f',25000,10,0],['Fufu','f',3000,40,0],['Cocktail Détente','d',12000,30,1],['Primus 72cl','d',5000,80,0]];
+ m.forEach((x,i)=>b.set(doc(db,'menu',String(i+1)),{n:x[0],t:x[1],p:x[2],s:x[3],d:x[4],x:0}));[['Terrasse',20],['Bar',12],['VIP',8]].forEach(x=>b.set(doc(db,'places',x[0]),{max:x[1],occ:0}));
+ b.set(doc(db,'events','1'),{t:'Live Afro-Jazz · Terrasse · VEN 21 JUIN 19h',o:1});b.set(doc(db,'events','2'),{t:'Soirée Cocktails Signature · SAM 22 JUIN 20h',o:2});b.set(doc(db,'cfg','main'),{wa:'243970000000'},{merge:true});await b.commit();toast('Menu, places et événements créés')}});
+setInterval(up,60000);rn();
 </script></body></html>
