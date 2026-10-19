@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>La Détente Haute Gamme</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F9F7F0;--cd:#fff;--tx:#0A0A0A;--g:#D4AF37;--ok:#1B8C4A;--bd:#E8E0C8;--bad:#c0392b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0A0A0A;--cd:#141414;--tx:#F9F7F0;--bd:#2c2c2c}}
+:root[data-theme=dark]{--bg:#0A0A0A;--cd:#141414;--tx:#F9F7F0;--bd:#2c2c2c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px Poppins,system-ui,sans-serif}
+h1,h2,h3{font-family:'Playfair Display',serif;margin:0 0 8px}h3{font-size:16px}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#0A0A0A;color:var(--g);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header b{font:600 18px 'Playfair Display',serif}main{padding:12px;max-width:760px;margin:auto}
+.c{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:12px;margin-bottom:12px;overflow-x:auto}
+button,select,input{font:inherit;border-radius:8px;border:1px solid var(--bd);padding:8px 10px;background:var(--cd);color:var(--tx);max-width:100%}
+button{cursor:pointer}.p{background:var(--g);color:#0A0A0A;border:0;font-weight:600}.ok{background:var(--ok);color:#fff;border:0}.w{background:#25D366;color:#fff;border:0}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:6px 0}
+.tk{background:#0A0A0A;color:var(--g);overflow:hidden;white-space:nowrap;border-radius:10px;padding:10px 0;margin-bottom:12px}
+.tk div{display:inline-block;padding-left:100%;animation:m 28s linear infinite}@keyframes m{to{transform:translateX(-100%)}}
+.vd{display:grid;grid-template-columns:1fr 1fr;gap:8px}.vd div{aspect-ratio:16/10;border-radius:10px;background:linear-gradient(135deg,#0A0A0A,#3a3012);color:var(--g);display:flex;align-items:flex-end;padding:8px;font-size:12px}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--g)}
+.tag{font-size:11px;padding:2px 8px;border-radius:10px;background:var(--bd)}.bad{color:var(--bad)}.g{color:var(--ok)}
+.md{position:fixed;inset:0;background:#000a;z-index:9;display:flex;align-items:flex-end;justify-content:center}.md>div{background:var(--bg);width:100%;max-width:760px;max-height:88%;overflow:auto;padding:14px;border-radius:16px 16px 0 0}
+.dr{position:fixed;top:0;right:0;bottom:0;width:78%;max-width:300px;background:var(--bg);z-index:8;padding:16px;box-shadow:-4px 0 20px #0006;overflow:auto}
+.dr button{display:block;width:100%;text-align:left;margin-bottom:8px}table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:5px;border-bottom:1px solid var(--bd);text-align:left}
+.hero{background:radial-gradient(circle at 70% 20%,#3a3012,#0A0A0A 70%);color:#F9F7F0;padding:60px 18px;text-align:center}.hero h1{font:600 32px 'Playfair Display',serif;color:var(--g);margin:10px 0}.hero small{letter-spacing:.2em;color:var(--g)}.gr{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.ft{background:#0A0A0A;color:#F9F7F0;text-align:center;padding:24px 14px;font-size:12px}.av{width:72px;height:72px;border-radius:50%;background:var(--g);object-fit:cover;display:block}
+</style></head><body><div id="app"></div>
+<script>
+const WA='243970000000',WAG='https://chat.whatsapp.com/LIEN_GROUPE',WAS='https://chat.whatsapp.com/LIEN_STAFF';
+const K='ldhg1';const FX=()=>({u:{n:'',pw:'',ph:'',pts:0},
+menu:[{id:1,n:'Moambe Royale',t:'f',p:28000,s:20,d:1,x:0},{id:2,n:'Tanganyika Catch (pêche du jour)',t:'f',p:32000,s:12,d:1,x:0},{id:3,n:'Poulet Moambe',t:'f',p:18000,s:25,d:0,x:0},{id:4,n:'Brochettes Mix',t:'f',p:22000,s:20,d:0,x:0},{id:5,n:'Poisson Salé',t:'f',p:25000,s:10,d:0,x:0},{id:6,n:'Fufu',t:'f',p:3000,s:40,d:0,x:0},{id:7,n:'Cocktail Détente',t:'d',p:12000,s:30,d:1,x:0},{id:8,n:'Primus 72cl',t:'d',p:5000,s:80,d:0,x:0}],
+pl:{Terrasse:{max:20,occ:6},Bar:{max:12,occ:5},VIP:{max:8,occ:2}},o:[],rs:[],nd:[],rp:[],
+st:[{n:'Marie',r:'Serveur',tb:'T1, T2, T3'},{n:'Jean',r:'Serveur',tb:'T4, T5'},{n:'Chef Paul',r:'Cuisinier',tb:'Cuisine'},{n:'Rita',r:'Comptoir',tb:'Bar'}],
+ev:['Live Afro-Jazz · Terrasse · VEN 21 JUIN 19h','Soirée Cocktails Signature · SAM 22 JUIN 20h']});
+window.alert=m=>{const d=document.createElement('div');d.textContent=m;d.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#0A0A0A;color:#D4AF37;padding:10px 16px;border-radius:20px;z-index:20;font-size:13px';document.body.appendChild(d);setTimeout(()=>d.remove(),2500)};
+window.confirm=()=>true;
+let S,R=null,L=1,V='home',M=null,Q={},TB='',AD='',DR=0;
+function ld(){try{S=JSON.parse(localStorage.getItem(K))||FX()}catch(e){S=FX()}}
+function sv(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+ld();addEventListener('storage',()=>{ld();if(!M&&!document.activeElement.matches('input'))rn()});
+const $=s=>S.menu.find(m=>m.id==s),E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const mn=o=>Math.round((Date.now()-o.t0)/6e4),gr=p=>p>=500?'Client VIP':p>=200?'Client fidèle':p>=50?'Client habituel':'Nouveau client';
+const wa=(l,t)=>`<a href="${l}" target="_blank"><button class="w">${t}</button></a>`;
+const wp=(t,n)=>wa(`https://wa.me/${WA}?text=${encodeURIComponent(n||'Bonjour')}`,t);
+function rn(){const a=document.getElementById('app');
+ if(!R&&L){a.innerHTML=lp();return}
+ if(!R){a.innerHTML=`<header><b>LA DÉTENTE · Restaurant • Bar</b></header><main><div class="c"><h2>Créer mon compte</h2><p>Haute Gamme · Kalemie · depuis 2022. Vous devenez client dès l'inscription.</p><input id="nm" placeholder="Nom complet" value="${E(S.u.n)}"> <input id="em" type="email" placeholder="Email" value="${E(S.u.em||'')}"> <input id="pwd" type="password" placeholder="Mot de passe (4+)"><div class="row"><button class="p" onclick="if(!nm.value.trim()||!em.value.trim()||pwd.value.length<4)return alert('Nom, email et mot de passe (4+) requis');S.u.n=nm.value.trim();S.u.em=em.value.trim();S.u.pw=pwd.value;sv();R='client';rn()">Créer mon compte</button></div></div>
+ <div class="c"><h3>Espace personnel</h3><p style="font-size:12px">Démonstration : sans mot de passe. À sécuriser avant la mise en ligne.</p><div class="row">${['Serveur','Cuisinier','Comptoir','Admin'].map(r=>`<button onclick="R='${r}';rn()">${r}</button>`).join('')}</div></div><p style="text-align:center;font-size:12px">Kalemie · Ouvert 10h–23h · +243 970 000 000 · contact@ladetente.cd</p></main>`;return}
+ a.innerHTML=`<header><b>La Détente · ${R}</b><span>${R=='client'?'<button onclick="DR=1;rn()">☰</button>':'<button onclick="R=null;rn()">Sortir</button>'}</span></header><main>${R=='client'?cl():sf()}</main>${DR?dr():''}${M?md():''}`}
+function cl(){if(V!='home')return `<button onclick="V='home';rn()">← Retour</button>`+({profil:pf,hist:hi,fid:fi})[V]();
+ const ev=S.ev.join('   ✦   ');
+ return `<div class="tk"><div>📣 ${E(ev)}</div></div><div class="c"><h3>Événements récents</h3><div class="vd"><div>▶ Soirée Live Band</div><div>▶ Dégustation</div></div></div>
+ <div class="c"><button class="p" style="width:100%" onclick="M='menu';Q={};rn()">🍽 Menu du restaurant &amp; boissons</button></div>
+ <div class="c"><h3>Places disponibles</h3>${Object.entries(S.pl).map(([k,v])=>`<div class="row"><b>${k}</b><span>${v.max-v.occ} / ${v.max} libres</span></div><div class="bar"><i style="width:${v.occ/v.max*100}%"></i></div>`).join('')}<div class="row"><button class="p" onclick="M='res';rn()">Réserver une place</button></div></div>`}
+function pf(){return `<div class="c"><h3>Profil</h3>${S.u.ph?`<img class="av" src="${S.u.ph}">`:'<div class="av"></div>'}<p><input type="file" accept="image/*" onchange="ph(this)"></p>
+ <p>Nom<br><input id="pn" value="${E(S.u.n)}"> <button onclick="S.u.n=pn.value;sv();rn()">Corriger</button></p>
+ <p>Nouveau mot de passe<br><input id="pw" type="password"> <button onclick="S.u.pw=pw.value;sv();alert('Mot de passe modifié')">Changer</button></p>
+ <button onclick="navigator.clipboard&&navigator.clipboard.writeText(location.href);alert('Lien d\\'invitation copié')">🔗 Inviter des amis</button></div>`}
+function ph(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{S.u.ph=r.result;sv();rn()};r.readAsDataURL(f)}
+function hi(){const l=S.o.filter(o=>o.by=='client');return `<div class="c"><h3>Mes commandes</h3>${l.length?l.map(o=>`<div class="row"><span>#${o.id} · ${o.its.map(i=>i.q+'× '+$(i.id).n).join(', ')}</span><b>${o.tot.toLocaleString('fr')} CDF</b></div>`).join(''):'Aucune commande.'}</div>`}
+function fi(){return `<div class="c"><h3>Fidélité</h3><p><b>${S.u.pts}</b> points · <span class="tag">${gr(S.u.pts)}</span></p><p style="font-size:12px">Nouveau → Habituel (50) → Fidèle (200) → VIP (500). 1 000 CDF = 1 point.</p></div>`}
+function dr(){return `<div class="dr"><button onclick="DR=0;rn()">✕ Fermer</button><button onclick="V='profil';DR=0;rn()">👤 Profil</button><button onclick="V='hist';DR=0;rn()">🧾 Mes commandes</button><button onclick="V='fid';DR=0;rn()">⭐ Mes points · ${gr(S.u.pts)}</button>${wa(WAG,'Groupe WhatsApp')}<br><br>${wp('Service client','Service client')}<br><br>${wp('Livraison à domicile','Je souhaite une livraison à domicile')}<br><br><button onclick="R=null;DR=0;V='home';rn()">Déconnexion</button></div>`}
+function md(){if(M=='res')return `<div class="md"><div><h3>Réserver une place</h3><select id="rz">${Object.keys(S.pl).map(k=>`<option>${k}</option>`)}</select> <input id="rq" type="number" min="1" value="2" style="width:70px"> <input id="rh" type="time" value="20:00"><div class="row"><button onclick="M=null;rn()">Annuler</button><button class="p" onclick="rs()">Confirmer</button></div></div></div>`;
+ const l=t=>S.menu.filter(m=>m.t==t).map(m=>`<div class="row"><span>${E(m.n)} · ${m.p.toLocaleString('fr')} CDF ${m.s>0?`<span class="tag g">dispo ${m.s}</span>`:'<span class="tag bad">épuisé</span>'}${m.d?' ⭐':''}</span>${m.s>0?`<span><button onclick="q(${m.id},-1)">−</button> ${Q[m.id]||0} <button onclick="q(${m.id},1)">+</button></span>`:''}</div>`).join('');
+ const sv_=R=='client'?`<input id="adv" type="time"> <button onclick="od(1)">Réserver pour plus tard</button>`:`<input id="tb" placeholder="Table (ex: T4)">`;
+ return `<div class="md"><div><h3>Menu</h3>${R=='client'?'':'<p style="font-size:12px">Commande au nom du client</p>'}<b>Plats (⭐ = du jour)</b>${l('f')}<b>Boissons</b>${l('d')}<div class="row">${sv_}</div><div class="row"><button onclick="M=null;rn()">Fermer</button><button class="p" onclick="od(0)">Commander maintenant</button></div></div></div>`}
+function q(i,d){const m=$(i);Q[i]=Math.max(0,Math.min(m.s,(Q[i]||0)+d));const t=document.getElementById('tb'),a=document.getElementById('adv');TB=t?t.value:'';AD=a?a.value:'';rn();if(TB)tb.value=TB;if(AD)adv.value=AD}
+function od(adv){const its=Object.entries(Q).filter(([,v])=>v>0).map(([k,v])=>({id:+k,q:v}));if(!its.length)return alert('Sélectionnez au moins un article');
+ const tbl=document.getElementById('tb'),ad=document.getElementById('adv');if(adv&&!ad.value)return alert('Choisissez une heure');
+ let tot=0,f=0,d=0;its.forEach(i=>{const m=$(i.id);m.s-=i.q;m.x+=i.q;tot+=m.p*i.q;m.t=='f'?f=1:d=1});
+ S.o.push({id:S.o.length+1,by:R=='client'?'client':R,tb:tbl?tbl.value||'?':'Client',its,tot,t0:Date.now(),adv:adv?ad.value:'',f:f?'nouveau':null,d:d?'nouveau':null,sv:0});
+ if(R=='client')S.u.pts+=Math.floor(tot/1000);sv();M=null;Q={};alert('Commande enregistrée');rn()}
+function rs(){const z=rz.value,n=+rq.value||1,p=S.pl[z];if(p.max-p.occ<n)return alert('Pas assez de places');p.occ+=n;S.rs.push({z,n,h:rh.value,by:S.u.n});sv();M=null;alert('Réservation confirmée');rn()}
+const NX={'nouveau':'en préparation','en préparation':'prêt'};
+function ad_(i,k){S.o[i][k]=NX[S.o[i][k]]||'prêt';sv();rn()}
+function sr(i){S.o[i].sv=1;sv();rn()}
+function nd(id){S.nd.push({m:$(id).n,h:new Date().toLocaleTimeString('fr',{hour:'2-digit',minute:'2-digit'}),by:R});sv();alert('Besoin envoyé à l\'administrateur')}
+function rp(){const t=document.getElementById('rt').value.trim();if(!t)return;S.rp.push({by:R,d:new Date().toLocaleString('fr'),t,ok:0});sv();alert('Rapport envoyé à l\'admin');rn()}
+function vr(i){S.rp[i].ok=1;sv();rn()}
+function rz_(){if(confirm('Réinitialiser toutes les données ?')){S=FX();sv();rn()}}
+function oc(z,d){const p=S.pl[z];p.occ=Math.max(0,Math.min(p.max,p.occ+d));sv();rn()}
+function ca(o,i,k){const its=o.its.filter(x=>!k||$(x.id).t==k).map(x=>x.q+'× '+$(x.id).n).join(', '),late=mn(o)>15,rd=(o.f||'prêt')=='prêt'&&(o.d||'prêt')=='prêt';
+ const act=k?(o[k]=='prêt'?'<span class="tag g">prêt</span>':`<button class="p" onclick="ad_(${i},'${k}')">${o[k]=='nouveau'?'Démarrer':'Marquer prêt'}</button>`):`<span class="tag">cuisine: ${o.f||'—'} · bar: ${o.d||'—'}</span> ${rd?`<button class="ok" onclick="sr(${i})">Servi</button>`:''}`;
+ return `<div class="row"><span>#${o.id} · ${E(o.tb)} · <span class="${late?'bad':''}">${mn(o)} min${late?' ⚠':''}</span>${o.adv?' · pour '+o.adv:''}<br>${E(its)}</span>${act}</div>`}
+const stk=(t,b)=>`<div class="c"><h3>Stock ${t=='f'?'cuisine':t=='d'?'comptoir':''}</h3><table>${S.menu.filter(m=>!t||m.t==t).map(m=>`<tr><td>${E(m.n)}</td><td class="${m.s<5?'bad':''}">${m.s} restant</td><td>${m.x} vendu</td>${b?`<td><button onclick="nd(${m.id})">Signaler</button></td>`:''}</tr>`).join('')}</table></div>`;
+function sf(){const A=S.o.map((o,i)=>[o,i]).filter(([o])=>!o.sv);let h='';
+ const lst=k=>{const l=A.filter(([o])=>k?o[k]:1);return l.length?l.map(([o,i])=>ca(o,i,k)).join(''):'Aucune commande.'};
+ if(R=='Serveur'){const me=S.st.filter(x=>x.r=='Serveur').map(x=>`${x.n} : ${x.tb}`).join(' · ');
+  h=`<div class="c"><h3>Mes tables</h3><p>${E(me)}</p><button class="p" onclick="M='menu';Q={};rn()">+ Nouvelle commande</button></div><div class="c"><h3>Commandes en cours</h3>${lst()}</div><div class="c"><h3>Plats prêts à servir</h3>${A.filter(([o])=>o.f=='prêt').map(([o])=>`#${o.id} ${E(o.tb)}`).join(' · ')||'—'}</div>${stk('',0)}`}
+ if(R=='Cuisinier')h=`<div class="c"><h3>Commandes cuisine</h3>${lst('f')}</div>${stk('f',1)}`;
+ if(R=='Comptoir')h=`<div class="c"><h3>Commandes boissons</h3>${lst('d')}</div>${stk('d',1)}`;
+ if(R=='Admin'){const oc_=Object.values(S.pl).reduce((a,p)=>a+p.occ,0),mx=Object.values(S.pl).reduce((a,p)=>a+p.max,0),lt=A.filter(([o])=>mn(o)>15).length;
+  h=`<div class="c"><div class="row"><span>Places occupées <b>${oc_}/${mx}</b></span><span>Commandes actives <b>${A.length}</b></span><span class="${lt?'bad':''}">En retard <b>${lt}</b></span></div><div class="row">${wa(WAS,'Groupe WhatsApp personnel')}</div></div>
+  <div class="c"><h3>Places</h3>${Object.entries(S.pl).map(([k,v])=>`<div class="row"><b>${k}</b> ${v.occ}/${v.max} <span><button onclick="oc('${k}',-1)">−</button> <button onclick="oc('${k}',1)">+</button></span></div>`).join('')}<p style="font-size:12px">Réservations : ${S.rs.map(r=>`${E(r.by)} ${r.n}p ${r.z} ${r.h}`).join(' · ')||'aucune'}</p></div>
+  <div class="c"><h3>Commandes (délai cible 15 min)</h3>${lst()}</div><div class="c"><h3>Besoins signalés</h3>${S.nd.map(n=>`<div>${n.h} · ${E(n.by)} : manque ${E(n.m)}</div>`).join('')||'Aucun'}</div>${stk('',0)}
+  <div class="c"><h3>Personnel &amp; tâches</h3><table>${S.st.map(x=>`<tr><td>${E(x.n)}</td><td>${x.r}</td><td>${E(x.tb)}</td><td>${wp('WhatsApp','Bonjour '+x.n+', point sur votre service')}</td></tr>`).join('')}</table></div>
+  <div class="c"><h3>Rapports journaliers</h3>${S.rp.map((r,i)=>`<div class="row"><span><b>${r.by}</b> · ${r.d}<br>${E(r.t)}</span>${r.ok?'<span class="tag g">vérifié</span>':`<button class="ok" onclick="vr(${i})">Vérifier</button>`}</div>`).join('')||'Aucun'}</div><button onclick="rz_()">Réinitialiser la démo</button>`}
+ else h+=`<div class="c"><h3>Mon rapport du jour</h3><textarea id="rt" rows="4" style="width:100%" placeholder="Résumé de ma journée…"></textarea><div class="row"><button class="p" onclick="rp()">Envoyer à l'admin</button>${wp('WhatsApp admin','Message de '+R)}${wa(WAS,'Groupe personnel')}</div></div>`;
+ return h}
+function lp(){const sg=[['Moambe Royale',28000,'Best-seller'],['Tanganyika Catch',32000,'Pêche du jour'],['Cocktail Détente',12000,'Bar']];
+ return `<header><b>LA DÉTENTE</b><button class="p" onclick="L=0;rn()">Espace membre</button></header><div class="hero"><small>RESTAURANT • BAR · KALEMIE · DEPUIS 2022</small><h1>Une adresse d'exception à Kalemie</h1><p>Cuisine locale revisitée, bar premium et terrasse sous les étoiles.</p><button class="p" onclick="L=0;rn()">Créer mon compte</button> <button onclick="L=0;rn()">Me connecter</button><div class="row" style="justify-content:center;gap:24px;margin-top:22px"><span><b style="color:var(--g)">500+</b><br>clients / mois</span><span><b style="color:var(--g)">4.9★</b><br>note Google</span><span><b style="color:var(--g)">02</b><br>terrasses</span></div></div><main>
+ <h2 style="margin-top:8px">L'Expérience</h2><div class="gr"><div class="c"><h3>Cuisine d'Auteur</h3>Poulet moambe signature, poissons du lac, fufu aérien.</div><div class="c"><h3>Bar Premium</h3>Cocktails infusés, spiritueux rares et bières locales toujours fraîches.</div><div class="c"><h3>Ambiance Curatée</h3>Playlist afro-chic, lumière tamisée, terrasse avec vue. Idéal afterwork &amp; soirées.</div></div>
+ <h2>Nos Signatures</h2><div class="gr">${sg.map(x=>`<div class="c"><span class="tag">${x[2]}</span><h3>${x[0]}</h3><b style="color:var(--g)">${x[1].toLocaleString('fr')} CDF</b></div>`).join('')}</div><div class="row" style="justify-content:center"><button onclick="L=0;rn()">Voir la carte complète →</button></div>
+ <h2>Événements à venir</h2>${S.ev.map(e=>`<div class="c">📅 ${E(e)}</div>`).join('')}
+ <h2>Contact</h2><div class="c">Kalemie · Ouvert 10h–23h<br>+243 970 000 000 · +243 971 234 567<br>contact@ladetente.cd<div class="row">${wp('Écrire sur WhatsApp','Bonjour La Détente')}<button class="p" onclick="L=0;rn()">Réserver / Commander</button></div></div></main><div class="ft">LA DÉTENTE • HAUTE GAMME • FAIT AVEC ♥ À KALEMIE</div>`}
+rn();
+</script></body></html>
