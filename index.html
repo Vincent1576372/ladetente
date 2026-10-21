@@ -138,6 +138,7 @@ function adm(){const A_=act(),oc=D.pl.reduce((a,p)=>a+p.occ,0),mx=D.pl.reduce((a
 // ---------- actions ----------
 async function reg(own){const e=$('em').value.trim(),p=$('pw').value,n=$('nm').value.trim();if(!n)return toast('Nom requis');const c=await createUserWithEmailAndPassword(au,e,p),u={name:n,email:e,role:own?'admin':'client',pts:0,ph:'',tb:'',tel:'',ref:REF,t0:Date.now()};
  if(own){const b=writeBatch(db);b.set(doc(db,'users',c.user.uid),u);b.set(doc(db,'meta','admin'),{uid:c.user.uid,t0:Date.now()});await b.commit()}else await setDoc(doc(db,'users',c.user.uid),u)}
+const keep=()=>{const s=document.querySelector('.md>div'),t=s?s.scrollTop:0;rn();const n=document.querySelector('.md>div');if(n)n.scrollTop=t};
 const tmp=()=>{TB=$('tb')?$('tb').value:TB;AD=$('adv')?$('adv').value:AD};
 const upd=(c,i,o)=>updateDoc(doc(db,c,i),o);
 document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(b&&A[b.dataset.a])Promise.resolve(A[b.dataset.a](b.dataset.p,b)).catch(x=>toast(er(x)))});
@@ -147,7 +148,8 @@ l0:()=>{L=0;rn()},l1:()=>{L=1;rn()},am:p=>{AM=p;rn()},hm:()=>{V='home';rn()},pg:
 go:async()=>{const e=$('em').value.trim(),p=$('pw').value;if(AM=='in')await signInWithEmailAndPassword(au,e,p);else await reg(false)},own:()=>reg(true),
 fg:async()=>{const e=$('em').value.trim();if(!e)return toast("Entrez d'abord votre email");await sendPasswordResetEmail(au,e);toast('Email de réinitialisation envoyé')},
 mm:()=>{M='menu';Q={};TB='';AD='';rn()},mr:()=>{M='res';rn()},mc:()=>{M=null;rn()},
-q:p=>{tmp();const[i,d]=p.split('|');Q[i]=Math.max(0,Math.min(MT(i).s,(Q[i]||0)+ +d));rn()},
+q:p=>{tmp();const[i,d]=p.split('|');Q[i]=Math.max(0,Math.min(MT(i).s,(Q[i]||0)+ +d));keep()},ct:p=>{tmp();CT=p;keep()},at:p=>{AT=p;rn()},
+claim:async()=>{if(!confirm('Devenir administrateur du restaurant ?'))return;const b=writeBatch(db);b.update(doc(db,'users',ME.id),{role:'admin'});b.set(doc(db,'meta','admin'),{uid:ME.id,t0:Date.now()});await b.commit();D.adm=true;toast('Vous êtes maintenant administrateur')},
 od:async p=>{tmp();const its=D.menu.filter(m=>Q[m.id]>0).map(m=>({id:m.id,n:m.n,t:m.t,p:m.p,q:Q[m.id]}));if(!its.length)return toast('Choisissez au moins un article');const adv=p=='1';if(adv&&!AD)return toast('Choisissez une heure');
  await addDoc(collection(db,'orders'),{uid:ME.id,cl:ME.name,by:R,srv:R=='client'?'':ME.name,tb:R=='client'?'Client':(TB||'?'),its,tot:its.reduce((a,i)=>a+i.p*i.q,0),t0:Date.now(),adv:adv?AD:'',f:its.some(i=>i.t=='f')?'nouveau':null,d:its.some(i=>i.t=='d')?'nouveau':null,sv:0});
  await Promise.all(its.map(i=>upd('menu',i.id,{s:increment(-i.q),x:increment(i.q)})));M=null;Q={};AD='';TB='';toast('Commande envoyée');rn()},
